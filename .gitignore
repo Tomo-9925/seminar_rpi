@@ -4,7 +4,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -31,6 +32,9 @@ Temporary Items
 *.dll
 *.so
 *.dylib
+*
+!/**/
+!*.*
 
 # Test binary, built with `go test -c`
 *.test

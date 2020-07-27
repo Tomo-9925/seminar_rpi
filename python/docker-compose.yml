@@ -1,0 +1,20 @@
+version: '3'
+
+volumes:
+  node_modules:
+
+services:
+  rpi_python:
+    build: '.'
+    # image: 'python:3.8.5'
+    command: "python main.py"
+    container_name: 'rpi_python'
+    devices:
+      - '/dev/gpiomem'
+      - '/dev/i2c-1'
+    privileged: true
+    environment:
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - './src:/src'
+    working_dir: '/src'
